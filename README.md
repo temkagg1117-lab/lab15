@@ -1,31 +1,39 @@
-# lab15-starter
+# Lab 15 — Git Workflow + GitHub Actions CI/CD
 
-F.CSM311 — Lab15-ийн starter код. Maven + JUnit5 жижиг проект.
+Энэхүү төсөл нь F.CSM311 Программ хангамжийн бүтээлт хичээлийн Lab 15 даалгаварт зориулан Maven ашиглан боловсруулагдсан Java төсөл юм.
 
-## Build & test
+## Хэрэгжүүлсэн боломжууд
 
-```bash
-mvn -B clean verify
-```
+- GitHub Actions CI pipeline
+- Java 17 болон Java 21 matrix build
+- JaCoCo coverage report
+- Branch protection workflow
+- Pull Request дээр суурилсан хөгжүүлэлт
 
-## Бүтэц
+## Хийгдсэн функцууд
 
-```
-src/
-├── main/java/lab/
-│   ├── Calculator.java      — нэмэх, хасах, үржих, хуваах
-│   └── StringUtils.java     — capitalize, isBlank (reverse-г Даалгавар 2-т нэмнэ)
-└── test/java/lab/
-    └── CalculatorTest.java
-```
+### StringUtils.reverse(String)
 
-## Lab15 даалгаврын товч жагсаалт
+String-ийг урвуу дарааллаар буцаадаг utility функц нэмсэн.
 
-1. CI workflow бичих (`.github/workflows/ci.yml`)
-2. `StringUtils.reverse()` нэмэх + тест + PR
-3. Matrix build (Java 17 + 21)
-4. Branch protection rule (main)
-5. JaCoCo coverage gate (≥ 70%)
-6. Peer review (хосоор)
+Жишээ:
 
-Дэлгэрэнгүйг `Lab15-Git-Workflow-and-CICD.md` файлд харна уу.
+```java
+StringUtils.reverse("hello");
+
+Үр дүн:
+
+olleh
+Локал орчинд ажиллуулах
+mvn clean verify
+CI/CD
+
+GitHub Actions автоматаар:
+
+Төслийг build хийх
+Unit test ажиллуулах
+JaCoCo coverage шалгах
+Java 17 болон Java 21 дээр тест хийх
+![alt text](<Screenshot 2026-05-17 210907.png>)
+
+![alt text](<Screenshot 2026-05-17 210932.png>)
