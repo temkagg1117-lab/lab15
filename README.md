@@ -33,6 +33,7 @@ GitHub Actions автоматаар:
 Unit test ажиллуулах
 JaCoCo coverage шалгах
 Java 17 болон Java 21 дээр тест хийх
+```
 ![alt text](<Screenshot 2026-05-17 210907.png>)
 
 ![alt text](<Screenshot 2026-05-17 210932.png>)
