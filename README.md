@@ -29,7 +29,6 @@ mvn clean verify
 CI/CD
 
 GitHub Actions автоматаар:
-
 Төслийг build хийх
 Unit test ажиллуулах
 JaCoCo coverage шалгах
